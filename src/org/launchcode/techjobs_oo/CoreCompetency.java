@@ -14,6 +14,9 @@ public class CoreCompetency {
 
     public CoreCompetency(String value) {
         this();
+        if(value == ""){
+            this.value = "Data not available";
+        };
         this.value = value;
     }
 

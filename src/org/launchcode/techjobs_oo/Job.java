@@ -31,8 +31,26 @@ public class Job {
         this.coreCompetency = new CoreCompetency(aCoreCompetency);
     }
 
+    @Override
+    public String toString() {
+        if(name == ""
+                && employer.toString() == ""
+                && location.toString() == ""
+                && positionType.toString() == ""
+                && coreCompetency.toString() == ""
+        ){
+            return "OOPS! This job does not seem to exist.";
+        }
+        return "\n" +
+                "ID: " + id + " \n" +
+                "Name: " + name + "\n" +
+                "Employer: " + employer.toString() + "\n" +
+                "Location: " + location.toString() + "\n" +
+                "Position Type: " + positionType.toString() + "\n" +
+                "Core Competency: " + coreCompetency.toString() + "\n";
+    }
 
-    // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
+// TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
 
     @Override

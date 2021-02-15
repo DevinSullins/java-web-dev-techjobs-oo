@@ -14,6 +14,9 @@ public class PositionType {
 
     public PositionType(String value) {
         this();
+        if(value == ""){
+            this.value = "Data not available";
+        };
         this.value = value;
     }
 
